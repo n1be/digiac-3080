@@ -1,24 +1,21 @@
 #!/usr/bin/python3
 "Dump Digiac paper tape"
-from sys import argv, exit
+from sys import argv
 
 
-def ta_char(b):
-    "Printable characters for Type Alpha/Type In"
-    #       00000000111111112222222233333333
-    #       01234567012345670123456701234567
-    alph = "0123456789-;/!'= ABCDEFGHIJKLM,."
-    beta = '.NOPQRSTUVWXYZ..)±@#$%¢&*(_:?°"+'
-    #       44444444555555556666666677777777
-    #       01234567012345670123456701234567
-    return (alph + beta)[b]
+def ta_char(digi_code):
+    "Printable character or '.' for Type Alpha/Type In"
+    #          0000000011111111222222223333333344444444555555556666666677777777
+    #          0123456701234567012345670123456701234567012345670123456701234567
+    albet = """0123456789-;/!'= ABCDEFGHIJKLM,..NOPQRSTUVWXYZ..)±@#$%¢&*(_:?°"+"""
+    return albet[digi_code]
 
 
 try:
-    files = argv[1:]
-    if not files:
+    FILES = argv[1:]
+    if not FILES:
         exit("Supply the filename(s) to be dumped on the command line")
-    for tape in argv[1:]:
+    for tape in FILES:
         print()
         buf = bytes(0)
         with open(tape, "rb") as f:
@@ -55,7 +52,7 @@ try:
                 c3 = ta_char(b3)
                 c4 = ta_char(b4)
                 wd = ((b1 * 64 + b2) * 64 + b3) * 64 + b4
-                print(f". {addr:04o}  {wd:08o}  |{c1}{c2}{c3}{c4}|")
+                print(f". {addr:04o}  {wd:08o}   {c1}{c2}{c3}{c4}")
                 addr += 1
                 buf = buf[5:]
             ln = len(buf)
