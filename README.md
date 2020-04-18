@@ -70,7 +70,7 @@ Dg> quit
 
 ### Documentation
 These files explain the Digiac and how to run the simulator.
-- **README.md** - Provides an overview of this project (this file).
+- **README.md** - Provides an overview of the project (this file).
 - **Using the Digiac-3080 Simulator.pdf** - Explains the simulator and how to use it.
 - **Digiac info.pdf** - Details of the Digiac-3080 machine architecture.
 - **tape/papertape_info.pdf** - Explains the format of Digiac paper tapes.
