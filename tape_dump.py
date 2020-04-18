@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# tape_dump.py - Dump the contents of Digiac-3080 paper tape (.ptp) files
+" tape_dump.py - Dump the contents of Digiac-3080 paper tape (.ptp) files"
 
 #   Copyright (C) 2020 Robert N. Evans
 #
@@ -16,7 +16,6 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-"Dump Digiac paper tape"
 from sys import argv
 
 
