@@ -18,17 +18,17 @@ Minimally, you will need these software packages to run the code in this reposit
 
 - Install support for python virtual environments and fetching packages from the [Python Package Index](https://pypi.org/):
 ```
-sudo apt install --no-install-recommends virtualenv
+sudo apt install python3-venv
 ```
 
-- Clone the repository:
+- Clone the repository.  If you do not have git installed, you can download a zip of the repository from github:
 ```
 git clone https://github.com/n1be/digiac-3080.git
 ```
 
-- Create a virtual environment inside the repository:
+- Create a virtual environment inside the repository directory:
 ```
-virtualenv --python=python3 digiac-3080/venv
+python3 -m venv digiac-3080/venv
 ```
 
 - Enter the virtual environment:
@@ -39,7 +39,7 @@ source venv/bin/activate
 
 - Install dependencies
 ```
-pip install readchar
+python -m pip install -r requirements.txt
 ```
 
 Run the Digiac-3080 simulator.
