@@ -1,6 +1,6 @@
 # Digiac-3080
 
-The [Digiac-3080](https://digiac3080.wordpress.com/ "Extinct Computer Tribute Blog") was the first computer architecture I learned.  This simple slow machine with no interrupts or stack could still educate and entertain.  I saved one program, a Stock Market game, from those days and wrote an simmulator to be able to run the game again.
+The [Digiac-3080](https://digiac3080.wordpress.com/ "Extinct Computer Tribute Blog") was the first computer architecture I learned.  This simple slow machine with no interrupts or stack could still educate and entertain.  I saved one program, a Stock Market game, from those days and wrote an simulator to be able to run the game again.
 
 ## Getting Started
 
